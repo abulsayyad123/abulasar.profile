@@ -1,0 +1,13 @@
+{{#bs-navbar type=type backgroundColor=bg collapsed=collapsed onCollapse=(action (mut collapsed) true) onExpand=(action (mut collapsed) false) as |navbar|}}
+  {{#navbar.content}}
+    {{#navbar.nav as |nav|}}
+      {{#each pageIcons as |page|}} 
+        {{#each-in page as |pageIcon pageName|}}
+          {{#nav.link-to pageName}}
+            <i class="fa fa-{{pageIcon}}" aria-hidden="true"></i> &nbsp;<span style="text-transform:capitalize">{{pageName}}</span>
+          {{/nav.link-to}}
+        {{/each-in}}  
+      {{/each}}
+    {{/navbar.nav}}
+  {{/navbar.content}}
+{{/bs-navbar}}

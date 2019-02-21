@@ -1,5 +1,9 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
-
-{{outlet}}
+{{navigation-bar
+  pages = pages
+}}  
+<main>
+  {{liquid-outlet}}
+</main>
+<footer>
+  <i {{action 'navigateToNextPage'}} class="fa fa-caret-down navigator" aria-hidden="true"></i>
+</footer>
