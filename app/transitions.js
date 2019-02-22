@@ -1,10 +1,16 @@
 export default function(){
-    let duration = 500;
+  // ----- Arguments -----
+  let duration = 500;
+  let pages = ['home', 'about', 'projects', 'resume', 'github'];
 
-    this.transition(
-      this.fromRoute('home'),
-      this.toRoute('about'),
-      this.use('toUp', {duration}),
-      this.reverse('toDown', {duration})
-    )
-  }
+  pages.forEach((page, index) => {
+    for(let i=index+1; i<pages.length; i++) {
+      this.transition(
+        this.fromRoute(page),
+        this.toRoute(pages[i]),
+        this.use('toUp', {duration}),
+        this.reverse('toDown', {duration})
+      )
+    }
+  })
+}

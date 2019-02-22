@@ -35,7 +35,7 @@
   cursor: pointer;
 }
 
-.about-me {
+.about-me-title{
   box-shadow: 0 0 1px #B74934;
   border-bottom: 1px solid #B74934;
   text-align: center;
@@ -43,6 +43,12 @@
   margin-top: 2%;
   font-weight: 600;
   color: #B7493
+}
+
+.about-me {
+  color: #9b9990;
+  font-family: Merriweather,serif;
+  font-size: 1.1rem;
 }
 // .btn {
 //     border: 1px solid #00d1b2;
